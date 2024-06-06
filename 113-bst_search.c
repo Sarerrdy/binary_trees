@@ -5,13 +5,12 @@
  * @tree: Pointer to the root node of the BST to search.
  * @value: The value to search in the tree.
  *
- * Return: Pointer to the node containing a value equals to `value`,
- *         or NULL if `tree` is NULL or if the value is not found.
+ * Return: Pointer to the created node, or NULL on failure
  */
 bst_t *bst_search(const bst_t *tree, int value)
 {
 	if (tree == NULL)
-		return NULL;
+		return (NULL);
 
 	while (tree != NULL)
 	{
@@ -23,5 +22,5 @@ bst_t *bst_search(const bst_t *tree, int value)
 			tree = tree->right;
 	}
 
-	return NULL;
+	return (NULL);
 }
